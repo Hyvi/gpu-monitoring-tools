@@ -55,7 +55,10 @@ spec:
       - name: "pod-gpu-resources"
         hostPath:
           path: "/var/lib/kubelet/pod-resources"
-
+      tolerations: 
+      - key: "nvidia.com/gpu"
+        operator: "Exists"
+        effect: "NoSchedule" 
 ---
 
 kind: Service
