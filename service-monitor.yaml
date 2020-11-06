@@ -15,7 +15,8 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: "dcgm-exporter"
+  name: "dcgm-exporter",
+  namespace: "monitoring",
   labels:
     app.kubernetes.io/name: "dcgm-exporter"
     app.kubernetes.io/version: "2.1.0"
